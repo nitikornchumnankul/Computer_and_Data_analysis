@@ -1,0 +1,97 @@
+
+```{r}
+install.packages("tidyverse")
+```
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+#ref https://www.rdocumentation.org/packages/dplyr/versions/0.3/topics/glimpse
+#This is like a transposed version of print: columns run down the page, and data runs across. This makes it possible to see every column in a data frame. It's a little like str applied to a data frame but it tries to show you as much data as possible. (And it always shows the underlying data, even when applied to a remote data source.)
+glimpse(mtcars)
+```
+
+
+```{r}
+#ref dim function https://statisticsglobe.com/dim-r-function/
+#The dim function of the R programming language returns the dimension (e.g. the number of columns and rows)
+
+dim(mtcars)
+```
+
+
+```{r}
+#ref head and tail http://rfunction.com/archives/699
+#head(x, n=6)
+#x – A matrix, data frame, or vector.
+#n – The first n rows (or values if x is a vector) will be returned.
+
+head(mtcars, n=3)
+```
+
+```{r}
+#tail(x, n=6)
+#x – A matrix, data frame, or vector.
+#n – The last n rows (or values if x is a vector) will be returned.
+tail(mtcars, n=2)
+```
+
+
+```{r}
+summary(mtcars)
+```
+
+
+
+```{r}
+nrow(mtcars)
+```
+
+
+```{r}
+ncol(mtcars)
+```
+
+
+
+```{r}
+names(mtcars)
+```
+
+```{r}
+mean(mtcars$mpg)
+```
+
+
+```{r}
+median(mtcars$mpg)
+```
+
+
+```{r}
+sd(mtcars$mpg)
+```
+
+
+```{r}
+sum(mtcars$mpg)
+```
+
+
+```{r}
+table(mtcars$am)
+```
+
+
+```{r}
+#ref https://statisticsglobe.com/complete-cases-in-r-example/
+#We can use complete.cases() to print a logical vector that indicates complete and missing rows (i.e. rows without NA).
+complete.cases(mtcars)
+```
+
+```{r}
+drop_na(mtcars)
+```
+
